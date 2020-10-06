@@ -1,38 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Source Sans Pro;
+  text-align: center;
+  line-height: 1.5;
+  background-color: #e1e1e3
+}
+
+header {
+  height: 110px;
+  background-color:#1d2539;
+  margin-top: 0px, 0px;
+  padding-top: 0px;
   
-  body {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-  }
-  
-  button, input[type="text"] {
-    padding: 5px;
-  }
-  
-  button: hover {
-    cursor: pointer;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .error-message {
-    color: red;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  
-  .row {
-    display: flex;
-  }
-  
-  .column {
-    flex: 50%;
-  }
+}
+
+footer {
+  height: 100px;
+  background-color: #1d2539;
+}
+
+.logo {
+  text-align: left;
+  padding-bottom: 0px;
+  margin: 0;
+}
+
+#js-form {
+  text-align: left;
+  padding-left: 10px;
+  color: white;
+}
+
+button, input[type="text"] {
+  padding: 5px;
+}
+
+button: hover {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.error-message {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+

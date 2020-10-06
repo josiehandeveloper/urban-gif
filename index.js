@@ -8,6 +8,7 @@ const apiKeyGiphy = "lGu06gRbAL1hxD1P57OXOPJ18tD6SELU";
 
 const searchURLGiphy = 'https://api.giphy.com/v1/gifs/search';
 
+
 //Urban & GIF
 function formatQueryParams(params) {
   const queryItems = Object.keys(params)
@@ -16,27 +17,23 @@ function formatQueryParams(params) {
 }
 
 
-//Display Urban
+//Display Urban Definitions
 function displayResultsUrban(responseJson) {
-  console.log(responseJson);
   $('#results-list').empty();
   for (let i = 0; i < responseJson.list.length; i++){
     $('#results-list').append(
-      `<li><h3>${responseJson.list[i].definition}</h3>
-      </li>`
+      `<h3>${responseJson.list[i].definition}</h3>`
     )};
 
-  $('#results');
+  $('.results').removeClass('hidden');
 };
 
-//Display Giphy
+//Display Gifs 
 function displayResultsGiphy(responseJson) {
-  console.log(responseJson);
   $(".gif").empty();
   for (let i = 0; i < responseJson.data.length; i++){
-    console.log(responseJson.data[i]);
     $(".gif").append(
-      `<img src= '${responseJson.data[i].images.original.url}'/>`
+      `<img src= '${responseJson.data[i].images.fixed_width.url}'/>`
     )};
 
   $('.results');
@@ -56,7 +53,6 @@ function getUrbanWord(query) {
       "X-RapidAPI-Key": apiKeyUrban})
   };
 
-  console.log(url);
 
   fetch(url, options)
     .then(response => {
@@ -75,6 +71,7 @@ function getUrbanWord(query) {
 function getGiphy(query) {
   const params = {
     q: query,
+    limit: 10
  
   };
   const queryString = formatQueryParams(params)
@@ -97,7 +94,7 @@ function getGiphy(query) {
     });
 }
 
-
+//Submit Form
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
