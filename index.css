@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,15 +8,14 @@ body {
   font-family: Source Sans Pro;
   text-align: center;
   line-height: 1.5;
-  background-color: #e1e1e3
+  background-color: #e1e1e3;
 }
 
 header {
   height: 110px;
-  background-color:#1d2539;
+  background-color: #1d2539;
   margin-top: 0px, 0px;
   padding-top: 0px;
-  
 }
 
 footer {
@@ -36,18 +35,18 @@ footer {
   color: white;
 }
 
-button, input[type="text"] {
+button,
+input[type="text"] {
   padding: 5px;
 }
 
-button: hover {
+button:hover {
   cursor: pointer;
 }
 
 .container {
   width: 100%;
   margin: 0 auto;
-
 }
 
 .error-message {
@@ -58,12 +57,32 @@ button: hover {
   display: none;
 }
 
-
 .row {
   display: flex;
+  justify-content: center;
+  padding: 0 0.5em 0 0.5em;
+  margin-left: -3.2em;
 }
 
-.column {
-  flex: 50%;
+.column-urban {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  padding: 0 1em 0 1em;
+  margin-top: -2.5em;
+  font-size: 12px;
 }
 
+.column-gif {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  padding: 0 1em 0 1em;
+}
+
+.results-list {
+  font-size: 10px;
+  display: flex;
+}
